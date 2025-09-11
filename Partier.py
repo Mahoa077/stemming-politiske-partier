@@ -1,14 +1,21 @@
 
 
-partier = ["Arbeiderpartiet", "Miljøpartiet De Grønne", "Høyre", "FremskrittPartiet", "Rødt", "Senterpartiet", "Sosialistisk Venstre", "Kristelig Folkeparti", "Venstre"]
+partier = ["arbeiderpartiet", "miljøpartet de grønne", "høyre", "fremskrittpartiet", "rødt", "senterpartiet", "sosialistisk venstre", "kristelig folkeparti", "venstre"]
 stemmer = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
-svar2 = ["arbeiderpartiet", "miljøpartet de grønne", "høyre", "fremskrittpartiet", "rødt", "senterpartiet", "sosialistisk venstre", "kristelig folkeparti", "venstre"]
+
+should_continue = True
 
 
-
-if True:
+while should_continue:
     print (f"Du kan stemme disse partiene {partier}")
-    stemme = input("skriv partiet du vil stemme på: ").lower()
+    stemme = input("Skriv partiet du vil stemme på: ").lower()
     print (f"Du stemte {stemme}")
-    if stemme != "partier":
+    
+    if stemme == "stop":
+        print("Stopper stemmingen")
+        should_continue = False
+    elif stemme not in partier:
         print ("ikke lov å stemme det!")
+    elif input == "stemme":
+        print("Ny person kan stemme")
+        input("Stem: ")
