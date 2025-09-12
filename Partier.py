@@ -7,6 +7,7 @@ def prosent_regning(stemmer):
     total = sum(stemmer)
     prosent = stemmer[i]
     svar = (prosent / total) * 100
+    round(svar/2)
     return svar
 
 should_continue = True
@@ -35,4 +36,4 @@ for i in range(len(partier)):
 
 print("Prosenten")
 for i in range(len(stemmer)):
-    print(prosent_regning(stemmer)).round(1)
+    print(prosent_regning(stemmer))
