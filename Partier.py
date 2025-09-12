@@ -1,15 +1,32 @@
-
+import random
 
 partier = ["ap", "mdg", "h", "frp", "r", "sp", "sv", "krf", "v"]
 stemmer = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+stemmere = list(range(0,100))
 
 def prosent_regning(stemmer):
     total = sum(stemmer)
     prosent = stemmer[i]
     svar = (prosent / total) * 100
-    round(svar/2)
+    round(svar/1)
     return svar
 
+for i in stemmere:
+    parti = random.choice(partier)
+    for i in range(len(partier)):
+        if parti == partier[i]:
+           stemmer[i] += 1
+
+for i in range(len(partier)):
+    print(f"{partier[i]}: {stemmer[i]}")
+
+print("Prosenten")
+for i in range(len(stemmer)):
+    print(prosent_regning(stemmer))
+
+
+
+""""
 should_continue = True
 
 while should_continue:
@@ -37,3 +54,5 @@ for i in range(len(partier)):
 print("Prosenten")
 for i in range(len(stemmer)):
     print(prosent_regning(stemmer))
+
+"""
