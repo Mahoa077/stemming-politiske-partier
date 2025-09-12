@@ -3,12 +3,13 @@ import random
 partier = ["ap", "mdg", "h", "frp", "r", "sp", "sv", "krf", "v"]
 stemmer = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 stemmere = list(range(0,100))
+flest = -1
 
 def prosent_regning(stemmer):
     total = sum(stemmer)
     prosent = stemmer[i]
     svar = (prosent / total) * 100
-    round(svar/1)
+    svar = round(svar,2)
     return svar
 
 for i in stemmere:
@@ -24,7 +25,14 @@ print("Prosenten")
 for i in range(len(stemmer)):
     print(prosent_regning(stemmer))
 
+flestindex = -1
 
+for i in range(len(stemmer)):
+    if stemmer[i] > flest:
+        flest = stemmer[i]
+        flestindex = i
+
+print(partier[flestindex])
 
 """"
 should_continue = True
