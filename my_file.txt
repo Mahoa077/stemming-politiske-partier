@@ -1,0 +1,22 @@
+ap: 7
+mdg: 14
+h: 11
+frp: 12
+r: 9
+sp: 12
+sv: 12
+krf: 10
+v: 13
+
+Prosent stemmer 
+ap: 7.0
+mdg: 14.0
+h: 11.0
+frp: 12.0
+r: 9.0
+sp: 12.0
+sv: 12.0
+krf: 10.0
+v: 13.0
+
+Partiet med flest stemmer er mdg
