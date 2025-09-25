@@ -61,8 +61,6 @@ with open("my_file.txt", "w") as file:
 #dette er opsettet inne i mitt nye dokument som viser hva som blir printet ut. Så jeg har skrevet det opp som jeg vil at det skal komme inne i det nye dokumentet. 
 
 
-#
-
 """"
 should_continue = True
 
